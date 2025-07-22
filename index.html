@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -46,4 +46,59 @@ function main(q) {
 }
     </script>
 </body>
+</html>
+ -->
+
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>FreeUseMe</title>
+		<script>
+		function dailyProcess() {
+			var baseUrl = 'https://www.freeuse.me/tag/';
+			var starNamesArray = starnames.value.split('\r').join('').split(' ').join('-').split('\n');
+			var now = new Date();
+			var currDate = now.getDate();
+			var nameCount = starNamesArray.length;
+			var idx = 0;
+			if (currDate > nameCount) { var idx = currDate % nameCount; }
+			if (currDate < nameCount) { var idx = nameCount % currDate; }
+			var currName = starNamesArray[idx];
+			var url = baseUrl + currName + '/random';
+			console.log('URL: ' + url);
+			document.getElementById('ifr').src = url;
+		}
+		</script>
+	</head>
+	<body onload="dailyProcess()" style="padding: 0px; margin: 0px; height: 100%; width: 100%;">
+		<iframe id="ifr" src="" style="width: 100%; height: 100%" allowfullscreen></iframe>
+<textarea style="display: none;" id="starnames">Ariella Ferrera
+Britney Amber
+Shey Fox
+Jodi West
+Ava Addams
+Alexis Fawx
+Bridgette B
+Tanya Tate
+Brandi Love
+Cherie DeVille
+Cory Chase
+Diamond Foxxx
+Aubrey Black
+Rachael Cavalli
+Reagan Foxx
+Lexi Luna
+Krissy Lynn
+Brooklyn Chase
+Coco Vandi
+Nicole Aniston
+Eva Notty
+Jessa Rhodes
+Adriana Chechik
+Lena Paul
+Dani Daniels</textarea>
+	</body>
 </html>
