@@ -51,11 +51,10 @@ function main(q) {
 
 
 
-
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>FreeUseMe0.4</title>
+		<title>GoodVoidVids0.1</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<style>
 			html, body {
@@ -66,14 +65,10 @@ function main(q) {
 			}
 		</style>
 		<script>
-			let userName = prompt("Complete the PIN:", "114");
-			
-                        if (userName != "1146") {
-	                  // window.location.href = "https://www.google.com/search?q=wrong+answer+buddy";
-			  window.location.href = "about:blank";
-                        }
 		function dailyProcess() {
-			var baseUrl = 'https://www.freeuse.me/tag/';
+			// Below website no longer reachable
+			// var baseUrl = 'https://www.freeuse.me/tag/';
+			var baseUrl = 'https://goodpornvids.com/s/';
 			var starNamesArray = starnames.value.split('\r').join('').split(' ').join('-').split('\n');
 			var now = new Date();
 			var currDate = now.getDate();
@@ -82,7 +77,7 @@ function main(q) {
 			if (currDate > nameCount) { var idx = currDate % nameCount; }
 			if (currDate < nameCount) { var idx = nameCount % currDate; }
 			var currName = starNamesArray[idx];
-			var url = baseUrl + currName + '/random';
+			var url = baseUrl + currName + '/longest';
 			console.log('URL: ' + url);
 			document.getElementById('ifr').src = url;
 		}
